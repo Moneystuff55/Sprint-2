@@ -1,3 +1,26 @@
+import sqlite3
+
+conn = sqlite3.connect('RoboData.db')
+
+c = conn.cursor()
+
+def create_table():
+   c.execute('CREATE TABLE IF NOT EXISTS roboData (Zero REAL, One REAL) ')
+
+def data_entry1():
+   c.execute("INSERT INTO roboData VALUES(1)")
+   conn.commit()
+   c.close()
+   conn.close()
+   
+def data_entry0():
+   c.execute("INSERT INTO roboData VALUES(,0)")
+   conn.commit()
+   c.close()
+   conn.close()
+
+create_table()
+                  
 print("Robo_Pocalypse")
 print("")
 print("     By       ")
@@ -66,10 +89,12 @@ def listJoiner():
 
 def appendZero():
     generalInput = None
+    data_entry0()
     ID.append(0)
 
 def appendOne():
     generalInput = None
+    data_entry1()
     ID.append(1)
 
 def choiceandStory():
