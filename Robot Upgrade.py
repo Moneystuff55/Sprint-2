@@ -8,13 +8,13 @@ def create_table():
    c.execute('CREATE TABLE IF NOT EXISTS roboData (Zero REAL, One REAL) ')
 
 def data_entry1():
-   c.execute("INSERT INTO roboData VALUES(1)")
+   c.execute("INSERT INTO roboData VALUES(1,9)")
    conn.commit()
    c.close()
    conn.close()
    
 def data_entry0():
-   c.execute("INSERT INTO roboData VALUES(,0)")
+   c.execute("INSERT INTO roboData VALUES(9,0)")
    conn.commit()
    c.close()
    conn.close()
