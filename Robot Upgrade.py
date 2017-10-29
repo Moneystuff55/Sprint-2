@@ -110,7 +110,7 @@ def choiceandStory():
     if choiceConverted == '111' or choiceConverted == '11010' or choiceConverted == '11011' or choiceConverted == '11000' or choiceConverted == '11001' or choiceConverted == '10' or choiceConverted == '01' or choiceConverted == '000' or choiceConverted == '0010' or choiceConverted == '00110' or choiceConverted == '00111':
         quit()
         
-while (turnCounter < 4):
+while (turnCounter < 5):
     
     turnCounter = turnCounter + 1
     generalInput = input("What is your choice?")
