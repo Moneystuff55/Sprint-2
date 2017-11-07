@@ -10,14 +10,10 @@ def create_table():
 def data_entry1():
    c.execute("INSERT INTO roboData VALUES(1,9)")
    conn.commit()
-   c.close()
-   conn.close()
    
 def data_entry0():
    c.execute("INSERT INTO roboData VALUES(9,0)")
    conn.commit()
-   c.close()
-   conn.close()
 
 create_table()
                   
@@ -75,10 +71,12 @@ ID = []
 turnCounter = 0
 noteWrite = None
 
+choiceConverted = (''.join(str(ID) for ID in ID))
+
 initialStory = ["While you are sleeping, you wake up hearing a knocking at the door, it might be humans, but it could also be the robots."+" "+
 "Then you hear them say"+" " +fName+" "+lName+" "+"are you there?"+" You have a crowbar, but if it is a human, you might injure them, but if its a robot, they will most likely kill you before you damage their machinery."]
 
-choiceConverted = (''.join(str(ID) for ID in ID))
+print(initialStory)
 
 print(choicesDictionary['ChoiceINIT'])
 
@@ -109,6 +107,8 @@ def choiceandStory():
         
     if choiceConverted == '111' or choiceConverted == '11010' or choiceConverted == '11011' or choiceConverted == '11000' or choiceConverted == '11001' or choiceConverted == '10' or choiceConverted == '01' or choiceConverted == '000' or choiceConverted == '0010' or choiceConverted == '00110' or choiceConverted == '00111':
         quit()
+        c.close
+        conn.close
         
 while (turnCounter < 5):
     
